@@ -2,54 +2,56 @@ html {
     font-family: "Rockwell Extra Bold";
 }
 
-body {
-    width : 900px;
+body{
     background-color: #85cff7;
 }
 
-h1 {
-    margin : 250px 250px 50px 250px;
-    border : 3px solid #ddd;
-    border-radius : 10px ;
-    text-align: center;
-    padding-bottom: 20px;
+div{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+h1{
+    border : 2px solid #ffecdc;
+    border-radius: 20px;
+    background-color: peachpuff;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
-    background-color: #FFFFFF;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-#prems {
-    margin : 50px 250px 50px 250px;
-    border : 3px solid #00f4a2;
-    border-radius : 5px ;
+    padding-bottom: 20px;
+    max-width: 500px;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: #7fffd4;
-    visibility: hidden;
 }
 
-#sec {
-    margin : 50px 250px 50px 250px;
-    border : 3px solid #ffc592;
-    border-radius : 5px ;
+h2{
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 400px;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: #ffdab9;
-    visibility: hidden;
 }
 
-#third {
-    margin : 50px 250px 50px 250px;
-    border : 3px solid #ff8453;
-    border-radius : 5px ;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: #ffa07a;
-    visibility: collapse;
+#prems{
+    background-color: lightcoral;
+    border : 2px solid #f4a6a6;
+}
+
+#sec{
+    background-color: aquamarine;
+    border : 2px solid #a5ffe0;
+}
+
+#third{
+    background-color: darksalmon;
+    border : 2px solid #efb5a1;
+}
+
+.hid{
+    display: none;
+}
+.backgroundImage{
+    background-image: url("../img/R.jfif");
 }

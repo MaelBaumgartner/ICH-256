@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src=" ./../../jquery/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+    <script src="script.js"></script>
+
+    <title>Octopus - Inscription</title>
+    <meta charset="UTF-8">
+
+    <style>
+        .red, label.error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="alert alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <span class="message"></span>
+    </div>
+    <div class="row">
+        <div class="header">
+            <h3>Inscription</h3>
+        </div>
+    </div>
+        <div class="panel-body">
+            <form id="inscription_form" action="http://www.hirtzel.ch/pot/exemples/form/view/index.php" method="post">
+                <div class="form-group row">
+                    <label for="nom" class="col-sm-2 col-form-label">Nom<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre Nom">
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="prenom" class="col-sm-2 col-form-label">Prénom<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre Prénom">
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="telephone" class="col-sm-2 col-form-label">Téléphone</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Votre N° de Tél.">
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">E-mail<span class="red">*</span></label>
+                        <div class="col-sm-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
+                        </div>
+                        <div class="col-sm-7"></div>
+                    </div>
+
+                <div class="form-group row">
+                <label for="categorie" class="col-sm-2 col-form-label">Catégorie<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="radio" class="fol-form-label" value="plongeur" id="categorie" name="categorie"><b> Plongeur</b></input> <br>
+                        <input type="radio" class="fol-form-label" value="nageur_apneiste"  id="categorie_2" name="categorie"><b> Apnéiste / Snorkeleur</b></input>
+                        <label id="categorie-error" class="error" for="categorie"></label>
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="affiliation" class="col-sm-2 col-form-label">Affiliation<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="radio" class="fol-form-label" value="prive" id="affiliation_2" name="affiliation"><b> Privé</b></input> <br>
+                        <input type="radio" class="fol-form-label" value="membre_d_un_club" id="affiliation" name="affiliation"><b> Membre d'un club</b></input>
+                        <label id="affiliation-error" class="error" for="affiliation"></label>
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row cache" id="cache_1">
+                    <label for="cmb_club" class="col-sm-2 col-form-label">Club / École<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <select name="cmb_club" id="cmb_club" class="form-control">
+                            <option selected="true" value>Veuillez choisir un club</option>
+                            <option value="octopus">Octopus</option>
+                            <option value="about_diving">About Diving</option>
+                            <option value="Autre">Autre (préciser)</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row cache" id="cache_2">
+                    <label for="txt_affiliation" class="col-sm-2 col-form-label">Nom de votre Club / École<span class="red">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="txt_affiliation" name="txt_affiliation" placeholder="Nom de votre club">
+                    </div>
+                    <div class="col-sm-7"></div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="monitor" class="col-sm-2 col-form-label">Moniteur</label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="monitor" name="moniteur" placeholder="Nom de votre club">
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <div id="cache_3" class="cache">
+                        <label for="nb_eleves" class="col-sm-2 col-form-label">Nombre d'élèves<span class="red">*</span></label>
+                        <div class="col-sm-2">
+                            <input class="form-control form-sm-2" type="number" value="0" id="nb_eleves" name="nb_eleves"/>
+                        </div>
+                        <div class="col-sm-7"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" class="" id="chk_conditions" name="chk_conditions">
+                    <label for="chk_conditions" class="">J'ai lu, approuvé et accepté les conditions générales d'Octopus<span class="red">*</span></label> <br>
+                    <label id="chk_conditions-error" class="error" for="chk_conditions"></label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" id="submit" name="submit">
+                    <input type="reset" class="btn btn-warning" id="reset" name="reset">
+                </div>
+            </form>
+        </div>
+</div>
+<script src="checkscript.js"></script>
+</body>
+</html>
